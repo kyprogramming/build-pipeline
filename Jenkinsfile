@@ -22,7 +22,7 @@ pipeline {
                         echo "INFO: Deploy Stage"
                         sh "docker build -t node-ap || true"
                         sh "docker run --restart always -p 3000:300 -d --name node-app node-app:latest"
-                         echo "INFO: Deployed" 
+                        echo "INFO: Deployed" 
                     }
             }
         }
